@@ -5,6 +5,11 @@ async function selectionSort(){
         let val1 = parseInt(bars[i].style.height);
         for(let j=i+1;j<bars.length;j++){
             bars[j].style.backgroundColor = "orange";
+            await new Promise((resolve) =>
+                setTimeout(() => {
+                resolve();
+                }, speed)
+            );
             let val2 = parseInt(bars[j].style.height);
             if(val2 < val1){
                 if(min_index != i){
@@ -13,11 +18,7 @@ async function selectionSort(){
                 min_index = j;
                 val1 = val2;
             }
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                resolve();
-                }, 300)
-            );
+
             bars[j].style.backgroundColor = "red";
             bars[min_index].style.backgroundColor = "blue";
         }
@@ -28,7 +29,7 @@ async function selectionSort(){
         await new Promise((resolve) =>
             setTimeout(() => {
             resolve();
-            }, 300)
+            }, speed)
         );
         bars[i].style.backgroundColor = "green";
     }

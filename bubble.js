@@ -6,7 +6,7 @@ async function bubbleSort(){
             await new Promise((resolve) =>
                 setTimeout(() => {
                 resolve();
-                }, 300)
+                },speed)
             );
             let val1 = parseInt(bars[j].style.height);
             let val2 = parseInt(bars[j+1].style.height);
@@ -17,7 +17,7 @@ async function bubbleSort(){
             await new Promise((resolve) =>
                 setTimeout(() => {
                 resolve();
-                }, 300)
+                },speed)
             );
             bars[j].style.backgroundColor = "red";
             bars[j+1].style.backgroundColor = "red";

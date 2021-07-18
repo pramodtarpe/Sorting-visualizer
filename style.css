@@ -38,3 +38,7 @@ body{
 .slider:hover {
     opacity: 1;
 }
+
+#mySpeed{
+    transform: rotateY(180deg);
+}

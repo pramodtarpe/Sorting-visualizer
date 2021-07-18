@@ -1,4 +1,5 @@
 var size = 10;
+var speed = 300;
 var arrcontainer = document.getElementById('bar-container');
 
 function fillBar(bar,target){
@@ -48,4 +49,9 @@ var slider = document.getElementById("myRange");
 slider.oninput = function() {
     size = parseInt(slider.value);
     generateArray();
+}
+
+var speedSlider = document.getElementById("mySpeed");
+speedSlider.oninput = function() {
+    speed = parseInt(speedSlider.value);
 }
