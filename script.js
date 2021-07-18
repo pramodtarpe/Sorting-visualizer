@@ -1,6 +1,5 @@
-var size = 50;
+var size = 10;
 var arrcontainer = document.getElementById('bar-container');
-var arr = new Array(size);
 
 function fillBar(bar,target){
     let currH = 0;
@@ -11,10 +10,13 @@ function fillBar(bar,target){
         }
         currH += target/100;
         bar.style.height = currH + 'px';
-    },5)
+    },1)
 }
-function generateArray(){
-    var bars = document.querySelectorAll('bar');
+var bars = document.getElementsByClassName('bar');
+//Generate Array
+function generateArray(size){
+    var arr = new Array(size);
+    bars = document.getElementsByClassName('bar');
     arrcontainer.innerHTML = '';
     for(let i=0;i<size;i++){
         arr[i] = Math.floor(Math.random() * 500);
@@ -25,8 +27,25 @@ function generateArray(){
         element.style.height = "0px";
         arrcontainer.appendChild(element);
         fillBar(element,i);
+        // element.textContent = i;
     }
 }
-generateArray();
+
+//Swap bar 
+function swap(bar1,bar2){
+    let h1 = parseInt(bar1.style.height);
+    let h2 = parseInt(bar2.style.height);
+    bar1.style.height = h2 + 'px';
+    bar2.style.height = h1 + 'px';
+}
+
+
+generateArray(size);
 var btn = document.getElementById('btn-generate');
 btn.addEventListener("click",generateArray);
+
+
+var slider = document.getElementById("myRange");
+slider.oninput = function() {
+  generateArray(parseInt(slider.value));
+}
