@@ -14,7 +14,7 @@ function fillBar(bar,target){
 }
 var bars = document.getElementsByClassName('bar');
 //Generate Array
-function generateArray(size){
+function generateArray(){
     var arr = new Array(size);
     bars = document.getElementsByClassName('bar');
     arrcontainer.innerHTML = '';
@@ -24,9 +24,9 @@ function generateArray(size){
     for(let i of arr){
         let element = document.createElement('div');
         element.classList.add("bar");
-        element.style.height = "0px";
+        element.style.height = i + "px";
         arrcontainer.appendChild(element);
-        fillBar(element,i);
+        // fillBar(element,i);
         // element.textContent = i;
     }
 }
@@ -42,10 +42,10 @@ function swap(bar1,bar2){
 
 generateArray(size);
 var btn = document.getElementById('btn-generate');
-btn.addEventListener("click",generateArray);
-
+btn.addEventListener("click",generateArray,size);
 
 var slider = document.getElementById("myRange");
 slider.oninput = function() {
-  generateArray(parseInt(slider.value));
+    size = parseInt(slider.value);
+    generateArray();
 }

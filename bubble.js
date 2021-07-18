@@ -26,5 +26,5 @@ async function bubbleSort(){
     }
 }
 
-var btn = document.getElementById('btn-sort');
+var btn = document.getElementById('btn-sort-bubble');
 btn.addEventListener("click",bubbleSort);
