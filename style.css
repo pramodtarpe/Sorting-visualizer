@@ -1,0 +1,22 @@
+body{
+    min-width: 600px;
+}
+#btn-generate{
+
+}
+#bar-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80%;
+    height: 550px;
+    background-color: aqua;
+}
+.bar{
+    padding: 1px;
+    border: 1px solid aquamarine;
+    width: 10px;
+    height: 400px;
+    background-color: red;
+}
