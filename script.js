@@ -21,6 +21,9 @@ function generateArray(){
     arrcontainer.innerHTML = '';
     for(let i=0;i<size;i++){
         arr[i] = Math.floor(Math.random() * 500);
+        if(arr[i] == 0){
+            arr[i] = 10;
+        }
     }
     for(let i of arr){
         let element = document.createElement('div');
