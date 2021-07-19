@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: lightpink;
@@ -13,14 +14,21 @@ body{
     height: 550px;
 }
 .bar{
-    color: white;
     margin-left: 1px;
     width: 50px;
     background-color: red;
     transition: 0.3s;
 }
+.bar p{
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    transform: rotate(-90deg) translateX(50px);
+}
 #dashboard{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-self: center;
     border: 2px solid black;
@@ -31,7 +39,7 @@ body{
 .slide-container{
     font-size: 1.5rem;
     display: flex;
-    width: 40%;
+    width: 600px;
 }
 .slider {
     width: 100%;
@@ -52,6 +60,7 @@ body{
 
 /*BUTTON*/
 .btn{
+    padding: 5px;
     font-size: 1rem;
     border: 0;
     background-color: lightsteelblue;

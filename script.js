@@ -21,8 +21,8 @@ function generateArray(){
     arrcontainer.innerHTML = '';
     for(let i=0;i<size;i++){
         arr[i] = Math.floor(Math.random() * 500);
-        if(arr[i] == 0){
-            arr[i] = 10;
+        if(arr[i] <= 10){
+            arr[i] = 10 + i;
         }
     }
     for(let i of arr){
@@ -31,7 +31,9 @@ function generateArray(){
         element.style.height = i + "px";
         arrcontainer.appendChild(element);
         // fillBar(element,i);
-        // element.textContent = i;
+        let para = document.createElement('p');
+        para.textContent = i;
+        element.appendChild(para);
     }
 }
 
@@ -41,6 +43,10 @@ function swap(bar1,bar2){
     let h2 = parseInt(bar2.style.height);
     bar1.style.height = h2 + 'px';
     bar2.style.height = h1 + 'px';
+    let t1 = bar1.childNodes[0].textContent;
+    let t2 = bar2.childNodes[0].textContent;
+    bar1.childNodes[0].textContent = t2;
+    bar2.childNodes[0].textContent = t1;
 }
 
 
