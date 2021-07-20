@@ -35,5 +35,4 @@ async function selectionSort(){
     }
 }
 
-var btn = document.getElementById('btn-sort-selection');
-btn.addEventListener("click",selectionSort);
+document.getElementById('btn-sort-selection').addEventListener("click",selectionSort);

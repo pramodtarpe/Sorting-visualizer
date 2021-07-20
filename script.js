@@ -30,10 +30,9 @@ function generateArray(){
         element.classList.add("bar");
         element.style.height = i + "px";
         arrcontainer.appendChild(element);
+        element.addEventListener("mouseenter",function(){document.getElementById('bar-value').textContent = parseInt(this.style.height)});
+        element.addEventListener("mouseleave",function(){document.getElementById('bar-value').textContent = '--'});
         // fillBar(element,i);
-        let para = document.createElement('p');
-        para.textContent = i;
-        element.appendChild(para);
     }
 }
 
@@ -43,10 +42,6 @@ function swap(bar1,bar2){
     let h2 = parseInt(bar2.style.height);
     bar1.style.height = h2 + 'px';
     bar2.style.height = h1 + 'px';
-    let t1 = bar1.childNodes[0].textContent;
-    let t2 = bar2.childNodes[0].textContent;
-    bar1.childNodes[0].textContent = t2;
-    bar2.childNodes[0].textContent = t1;
 }
 
 
