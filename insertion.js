@@ -1,14 +1,3 @@
-var delay = function(){
-    return new Promise((resolve) => {setTimeout(() => {resolve()},speed)})
-}
-
-async function fun(){
-    for(let i=0;i<5;i++){
-        await delay();
-        console.log(i);
-    }
-}
-
 async function insertionSort(){
     for(let i=1;i<bars.length;i++){
 

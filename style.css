@@ -16,7 +16,7 @@ body{
     margin-left: 1px;
     width: 50px;
     background-color: red;
-    transition: 0.3s;
+    transition: 0.3s all ease;
 }
 .bar p{
     margin: 0;
@@ -50,9 +50,6 @@ body{
 }
 .slider:hover {
     opacity: 1;
-}
-#mySpeed{
-    transform: rotateY(180deg);
 }
 .slide-box{
     margin: 0.8rem;

@@ -1,3 +1,6 @@
+var delay = function(){
+    return new Promise((resolve) => {setTimeout(() => {resolve()},speed)})
+}
 var size = 10;
 var speed = 300;
 var arrcontainer = document.getElementById('bar-container');
@@ -48,14 +51,14 @@ function swap(bar1,bar2){
 generateArray(size);
 var btn = document.getElementById('btn-generate');
 btn.addEventListener("click",generateArray,size);
-
+//slider for size of array
 var slider = document.getElementById("myRange");
 slider.oninput = function() {
     size = parseInt(slider.value);
     generateArray();
 }
-
+//slider for speed of sorting
 var speedSlider = document.getElementById("mySpeed");
 speedSlider.oninput = function() {
-    speed = parseInt(speedSlider.value);
+    speed = -1 * parseInt(speedSlider.value);
 }
