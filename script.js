@@ -40,7 +40,7 @@ function generateArray(){
 }
 
 //Swap bar 
-function swap(bar1,bar2){
+async function swap(bar1,bar2){
     let h1 = parseInt(bar1.style.height);
     let h2 = parseInt(bar2.style.height);
     bar1.style.height = h2 + 'px';
