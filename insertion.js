@@ -7,7 +7,7 @@ async function insertionSort(){
         await delay();
         while(jj>=0 && (parseInt(bars[ii].style.height) < parseInt(bars[jj].style.height))){
             await delay();
-            swap(bars[ii],bars[jj]);
+            await swap(bars[ii],bars[jj]);
             bars[ii].style.backgroundColor = "green";
             bars[jj].style.backgroundColor = "blue";
             jj--;

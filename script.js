@@ -40,11 +40,16 @@ function generateArray(){
 }
 
 //Swap bar 
-async function swap(bar1,bar2){
-    let h1 = parseInt(bar1.style.height);
-    let h2 = parseInt(bar2.style.height);
-    bar1.style.height = h2 + 'px';
-    bar2.style.height = h1 + 'px';
+function swap(bar1,bar2){
+    return new Promise((resolve)=> {
+        setTimeout(() => {
+            let h1 = parseInt(bar1.style.height);
+            let h2 = parseInt(bar2.style.height);
+            bar1.style.height = h2 + 'px';
+            bar2.style.height = h1 + 'px';
+            resolve();
+        }, speed);
+    })
 }
 
 
