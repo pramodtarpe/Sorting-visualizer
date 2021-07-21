@@ -1,4 +1,5 @@
 async function selectionSort(){
+    document.getElementById('bar-value').textContent = "Selection Sort in progress";
     for(let i=0;i<bars.length;i++){
         bars[i].style.backgroundColor = "blue";
         var min_index = i;

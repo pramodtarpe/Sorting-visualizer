@@ -1,6 +1,6 @@
 async function insertionSort(){
+    document.getElementById('bar-value').textContent = "Insertion Sort in progress";
     for(let i=1;i<bars.length;i++){
-
         bars[i].style.backgroundColor = "blue";
         let ii = i;
         let jj = ii-1;
