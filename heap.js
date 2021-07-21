@@ -19,18 +19,22 @@ async function heapify(n,i){
 
 async function heapSort(){
     let lastchild = Math.floor(bars.length/2) -1;
+    document.getElementById('bar-value').textContent = "Building Max - Heap";
     for(let i=(lastchild);i>=0;i--){
         console.log(i)
         await heapify(bars.length,i);
     }
+    document.getElementById('bar-value').textContent = "Swaping element at Index 0";
     for(let i=bars.length-1;i>=1;i--){
-        bars[i].style.backgroundColor = "green";
+        bars[i].style.backgroundColor = "blue";
+        bars[0].style.backgroundColor = "blue";
         await swap(bars[0],bars[i]);
-        console.log(i + 'swap');
+        await delay();
         await heapify(i,0);
-        console.log(i + 'heapify');
+        bars[i].style.backgroundColor = "green";
     }
     bars[0].style.backgroundColor = "green";
+    document.getElementById('bar-value').textContent = "Array has been Sorted";
 }
 
 document.getElementById("btn-sort-heap").addEventListener("click",heapSort);
