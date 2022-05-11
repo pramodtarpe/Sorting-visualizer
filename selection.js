@@ -20,7 +20,7 @@ async function selectionSort(){
             bars[min_index].style.backgroundColor = "blue";
         }
         if(i != min_index){
-            swap(bars[i],bars[min_index]);
+            swapBars(bars[i],bars[min_index]);
             bars[min_index].style.backgroundColor = "red";
             await delay();
         }

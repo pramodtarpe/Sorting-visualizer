@@ -11,7 +11,7 @@ async function heapify(n,i){
     if(child != i){
         bars[child].style.backgroundColor = "orange";
         bars[i].style.backgroundColor = "orange";
-        await swap(bars[child],bars[i]);
+        await swapBars(bars[child],bars[i]);
         await delay();
         bars[child].style.backgroundColor = "red";
         bars[i].style.backgroundColor = "red";
@@ -33,7 +33,7 @@ async function heapSort(){
     for(let i=bars.length-1;i>=1;i--){
         bars[i].style.backgroundColor = "blue";
         bars[0].style.backgroundColor = "blue";
-        await swap(bars[0],bars[i]);
+        await swapBars(bars[0],bars[i]);
         bars[i].style.backgroundColor = "green";
         await delay();
         await heapify(i,0);

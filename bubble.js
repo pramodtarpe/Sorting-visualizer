@@ -10,7 +10,7 @@ async function bubbleSort(){
 
             if(val1 > val2){
                 await delay();
-                swap(bars[j],bars[j+1]);
+                swapBars(bars[j],bars[j+1]);
             }
             await delay();
             bars[j].style.backgroundColor = "red";
